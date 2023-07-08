@@ -81,6 +81,10 @@ function Ta.insert(tabs, id)
                         id = nil,
                         width = 0,
                     },
+                    aerial = {
+                        id = nil,
+                        width = 0,
+                    },
                 },
             },
         },

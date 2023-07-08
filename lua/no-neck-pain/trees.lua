@@ -11,6 +11,11 @@ local INTEGRATIONS = {
         close = "Neotree close",
         open = "Neotree reveal",
     },
+    aerial = {
+        enabled = true,
+        close = "AerialClose",
+        open = "AerialOpen",
+    },
 }
 
 ---Whether the given `fileType` matches a supported side tree or not.
@@ -19,7 +24,10 @@ local INTEGRATIONS = {
 ---@return boolean
 ---@private
 function T.isSideTree(fileType)
-    return fileType == "NvimTree" or fileType == "undotree" or fileType == "neo-tree"
+    return fileType == "NvimTree"
+        or fileType == "undotree"
+        or fileType == "neo-tree"
+        or fileType == "aerial"
 end
 
 ---Scans the current tab wins to update registered side trees.
@@ -39,6 +47,10 @@ function T.refresh(tab)
             width = 0,
         },
         undotree = {
+            id = nil,
+            width = 0,
+        },
+        aerial = {
             id = nil,
             width = 0,
         },

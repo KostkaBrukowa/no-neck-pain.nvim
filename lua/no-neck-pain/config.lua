@@ -274,6 +274,11 @@ NoNeckPain.options = {
             --- @type "left"|"right"
             position = "left",
         },
+        aerial = {
+            -- The position of the tree.
+            --- @type "left"|"right"
+            position = "left",
+        },
     },
 }
 

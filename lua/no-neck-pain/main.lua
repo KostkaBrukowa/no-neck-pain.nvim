@@ -173,7 +173,7 @@ function N.enable(scope)
                 table.insert(tab.wins.splits, { id = focusedWin, vertical = isVSplit })
 
                 if isVSplit then
-                    S = N.init(p.event, tab)
+                    -- S = N.init(p.event, tab)
                 end
             end)
         end,
